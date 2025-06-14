@@ -1,0 +1,16 @@
+<html>
+  <head>
+    {% if title %}
+    <title>Blog Home - {{ title }}</title>
+    {% else %}
+    <title>Blog Home</title>
+    {% endif %}
+  </head>
+  <body>
+    {% for post in posts %}
+    <h2>{{ post.title }}</h2>
+    <p>By {{ post.author }} dated: {{ post.date_posted }}</p>
+    <p>{{ post.content }}</p>
+    {% endfor %}
+  </body>
+</html>
