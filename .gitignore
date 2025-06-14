@@ -1,0 +1,42 @@
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+ENV/
+.ENV/
+venv-*
+env-*
+
+# Pipenv
+# Pipfile.lock is managed by Pipenv, but Pipfile is not ignored
+# pipenv.log is often ignored
+pip-debug.log
+pipenv.log
+
+# Database
+db.sqlite3
+
+# Media files
+media/
+
+# Static files
+static/
+
+# Logs
+*.log
+logs/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
