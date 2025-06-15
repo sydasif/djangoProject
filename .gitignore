@@ -24,9 +24,6 @@ db.sqlite3
 # Media files
 media/
 
-# Static files
-static/
-
 # Logs
 *.log
 logs/
