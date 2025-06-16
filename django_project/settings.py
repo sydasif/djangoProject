@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "blog.apps.BlogConfig",  # Custom app for blog functionality
     "users.apps.UsersConfig",  # Custom app for user management
+    "crispy_forms",  # For better form rendering
+    "crispy_bootstrap5",  # For Bootstrap 5 integration
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -120,7 +122,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "blog/static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
+CRISPY_TEMPLATE_PACK = "bootstrap5"  # Use Bootstrap 5 for crispy forms
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
