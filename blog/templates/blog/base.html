@@ -35,8 +35,7 @@
           </ul>
           <ul class="navbar-nav">
             {% if user.is_authenticated %}
-              <li class="nav-item"><a class="nav-link" href="#">New Post</a></li> {# Example for a new link #}
-              <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
             {% else %}
               <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
