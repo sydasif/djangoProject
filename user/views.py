@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.contrib import messages
 from .forms import UserRegisterForm
 from django.shortcuts import render, redirect
@@ -13,7 +12,7 @@ def register_user(request):
                 request,
                 "Your account has been created successfully! You can now log in.",
             )
-            return redirect("/")
+            return redirect("blog-home")
     else:
         form = UserRegisterForm()
     return render(request, "registration/register.html", {"form": form})

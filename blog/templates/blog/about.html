@@ -1,34 +1,9 @@
 {% extends "blog/base.html" %}
-{% block meta_title %}
-  <title>Django Blog - About</title>
-{% endblock meta_title %}
+{% block title %}About - Django Blog{% endblock title %}
 
 {% block content %}
-  <div class="container py-5">
-    <div class="text-center mb-5">
-      <h1 class="display-5 fw-bold text-primary">About Django Blog</h1>
-      <p class="lead text-muted">Learn more about our mission, values, and team behind the blog.</p>
+    <div class="container py-5">
+      <h1>About This Blog</h1>
+      <p>This blog is created to demonstrate Django web development.</p>
     </div>
-
-    <div class="row g-5 align-items-center">
-      <div class="col-md-8 mx-auto">
-        <div class="p-4 bg-white rounded shadow-sm mb-4">
-          <h2 class="h4 fw-bold mb-3">Our Story</h2>
-          <p>Welcome to Django Blog — a platform built for developers and tech enthusiasts who want to share knowledge, learn from others, and grow together in the world of programming and web development.</p>
-          <p>We started this blog as a personal project to explore the power of Django and have grown into a community-driven space where people can publish articles, share insights, and connect with like-minded individuals.</p>
-        </div>
-
-        <div class="p-4 bg-white rounded shadow-sm mb-4">
-          <h2 class="h4 fw-bold mb-3">What We Do</h2>
-          <p>We focus on publishing high-quality technical content related to Python, Django, web development, APIs, databases, DevOps, and much more. Whether you're a beginner or an experienced developer, there’s something here for everyone.</p>
-        </div>
-
-        <div class="p-4 bg-white rounded shadow-sm">
-          <h2 class="h4 fw-bold mb-3">Get Involved</h2>
-          <p>Interested in contributing? We welcome guest writers and collaborators! Reach out or consider registering to start sharing your knowledge today.</p>
-          <a href="{% url 'blog-home' %}" class="btn btn-primary mt-2">Back to Home</a>
-        </div>
-      </div>
-    </div>
-  </div>
 {% endblock content %}
