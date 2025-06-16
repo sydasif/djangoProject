@@ -50,9 +50,6 @@
           <ul class="navbar-nav ms-2">
             {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="btn btn-outline-primary btn-sm me-2" href="#">Profile</a>
-              </li>
-              <li class="nav-item">
                 <a class="btn btn-primary btn-sm" href="#">Logout</a>
               </li>
             {% else %}
@@ -60,7 +57,7 @@
                 <a class="btn btn-outline-primary btn-sm me-2" href="#">Login</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-primary btn-sm" href="#">Register</a>
+                <a class="btn btn-primary btn-sm" href="{% url 'register' %}">Register</a>
               </li>
             {% endif %}
           </ul>
@@ -68,6 +65,15 @@
       </div>
     </nav>
   </header>
+<div class="container">
+      {% if messages %}
+          <ul class="messages">
+              {% for message in messages %}
+                  <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              {% endfor %}
+          </ul>
+      {% endif %}
+    </div>
 
   <!-- Main Content -->
   <main class="flex-grow-1">
