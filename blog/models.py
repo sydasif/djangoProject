@@ -26,4 +26,4 @@ class Post(models.Model):
         Returns a string representation of the Post object.
         This is used in the Django admin and when printing Post objects.
         """
-        return self.title
+        return str(self.title)
