@@ -35,11 +35,22 @@
           </ul>
           <ul class="navbar-nav">
             {% if user.is_authenticated %}
-              <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+              </li>
+              <li class="nav-item">
+                <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-primary ms-2">Logout</button>
+                </form>
+              </li>
             {% else %}
-              <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-              <li class="nav-item"><a class="btn btn-primary btn-sm ms-2" href="{% url 'register' %}">Register</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary ms-2"href="{% url 'register' %}">Register</a>
+              </li>
             {% endif %}
           </ul>
         </div>
