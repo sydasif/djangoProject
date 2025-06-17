@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 from django.shortcuts import render, redirect
 
@@ -26,3 +27,14 @@ def register_user(request):
     else:
         form = UserRegisterForm()
     return render(request, "users/register.html", {"form": form})
+
+
+@login_required
+def profile(request):
+    """
+    Displays the user's profile page.
+
+    This view renders the profile template, allowing users to view their profile
+    information. It does not handle any form submissions or data modifications.
+    """
+    return render(request, "users/profile.html")
